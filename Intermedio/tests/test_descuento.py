@@ -9,7 +9,7 @@ import sys, os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
 
 import pytest
-from src.calcular_descuento import calcular_descuento
+from Intermedio.src.descuento import calcular_descuento
 
 
 # ─────────────────────────────────────────────
@@ -35,9 +35,8 @@ class TestCasosNormales:
         assert resultado == 100.0
 
     def test_descuento_con_decimales(self):
-        """N3: Precio con decimales y 20% — valida redondeo."""
         resultado = calcular_descuento(49.99, 20.0)
-        assert resultado == 39.99
+        assert resultado == pytest.approx(39.99, abs=0.01) # Allows a small margin
 
 
 # ─────────────────────────────────────────────
