@@ -1,4 +1,4 @@
-import stripe_module as stripe
+import stripe as stripe
 import db_module as db
 import email_module as email
 
