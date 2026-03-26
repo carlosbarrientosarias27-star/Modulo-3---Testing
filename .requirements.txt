@@ -1,1 +1,3 @@
-pytest==9.0.2
+pytest==9.0.2 
+stripe
+psycopg2-binary
