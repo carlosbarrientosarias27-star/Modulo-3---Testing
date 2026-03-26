@@ -12,7 +12,7 @@ import sys, os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
 
 import pytest
-from descuento import calcular_descuento
+from Intermedio.src.descuento import calcular_descuento
 
 
 @pytest.mark.parametrize("precio, porcentaje, esperado", [
